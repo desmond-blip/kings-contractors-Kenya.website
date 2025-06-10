@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kings Contractors KE</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .image-gallery {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .image-container {
+      width: 300px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-image 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="engineer-info-box">
+      <div class="engineer-info">
+        <div class="engineer-photo-wrapper">
+          <img src="eng.jpg" alt="Engineer Photo" class="engineer-photo" />
+          <div class="engineer-overlay">
+            <p class="engineer-name">Eng. Joel Ogamba (Kings)</p>
+            <p class="engineer-contact"><a href="tel:+254798017124">+254 798 017 124</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Kings Contractors KE</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="proj.html">Projects</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="client.html">Clients</a></li>
+        <li><a href="cont.html">Contact Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="port.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to Kings Contractors KE</h2>
+      <p>We provide quality construction and contracting services with reliability, innovation, and professionalism throughout Kenya.</p>
+      <a href="get.html">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Background Changing Images Section -->
+  <section class="image-gallery">
+    <div class="image-container" id="bg1"></div>
+    <div class="image-container" id="bg2"></div>
+    <div class="image-container" id="bg3"></div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h3>Our Services</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Construction</h4>
+          <p>End-to-end project development and execution.</p>
+        </div>
+        <div class="card">
+          <h4>Consultation</h4>
+          <p>Expert advice for all your construction needs.</p>
+        </div>
+        <div class="card">
+          <h4>Design</h4>
+          <p>Modern, efficient, and innovative building designs.</p>
+        </div>
+        <div class="card">
+          <h4>Project Management</h4>
+          <p>Professional oversight from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Kings Contractors KE. Build Today Smile Tomorrow.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Changing Backgrounds -->
+  <script>
+    const images1 = ['back.jpg', 'bac.jpg', 'img.jpg'];
+    const images2 = ['back.jpg', 'bac.jpg', 'img.jpg'];
+    const images3 = ['back.jpg', 'bac.jpg', 'img.jpg'];
+
+    let index = 0;
+
+    function changeBackgrounds() {
+      document.getElementById('bg1').style.backgroundImage = `url('${images1[index]}')`;
+      document.getElementById('bg2').style.backgroundImage = `url('${images2[index]}')`;
+      document.getElementById('bg3').style.backgroundImage = `url('${images3[index]}')`;
+      
+      index = (index + 1) % images1.length;
+    }
+
+    setInterval(changeBackgrounds, 3000); // Change every 3 seconds
+    window.onload = changeBackgrounds;
+  </script>
+</body>
+</html>

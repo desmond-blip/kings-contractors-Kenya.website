@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Engineer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #1e40af;
+    }
+
+    .whatsapp-link {
+      margin-top: 1rem;
+      display: block;
+      text-align: center;
+      color: white;
+      background-color: #25D366;
+      padding: 0.75rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .whatsapp-link:hover {
+      background-color: #1ebd5b;
+    }
+  </style>
+</head>
+<body>
+  <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+    <h2>Reach Our Engineer</h2>
+
+    <label for="location">Your Location</label>
+    <input type="text" id="location" name="Location" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="Phone" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="Email" required />
+
+    <label for="project">Project Description</label>
+    <textarea id="project" name="Project" rows="5" required></textarea>
+
+    <button type="submit">Send Details</button>
+
+    <a class="whatsapp-link" href="https://wa.me/254798017124" target="_blank">
+      Contact via WhatsApp
+    </a>
+  </form>
+</body>
+</html>

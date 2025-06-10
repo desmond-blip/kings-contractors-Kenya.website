@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Kings Contractors KE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      grid-column: span 2;
+      resize: vertical;
+      height: 120px;
+    }
+
+    button {
+      grid-column: span 2;
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #14306b;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      form textarea, button {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>Reach out to Kings Contractors KE</p>
+  </header>
+
+  <div class="container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Address:</strong> Kisii, Kenya</p>
+      <p><strong>Phone:</strong> +254 798 017 124</p>
+      <p><strong>Email:</strong> info@kingscontractorske.co.ke</p>
+      <p><strong>Hours:</strong> Mon–Sat: 8:00 AM – 5:00 PM</p>
+    </div>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone (optional)" />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <button type="button" onclick="shareOnWhatsApp()">Share via WhatsApp</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Kings Contractors KE. Build Today, Smile Tomorrow.</p>
+  </footer>
+
+  <script>
+    function shareOnWhatsApp() {
+      const name = document.querySelector('input[name="name"]').value;
+      const email = document.querySelector('input[name="email"]').value;
+      const phone = document.querySelector('input[name="phone"]').value;
+      const message = document.querySelector('textarea[name="message"]').value;
+
+      const whatsappText = `Hello Kings Contractors KE,%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      const phoneNumber = '254798017124'; // Replace with your business number (no plus or spaces)
+
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappText}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+
+</body>
+</html>
